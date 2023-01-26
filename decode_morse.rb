@@ -24,7 +24,9 @@ def get_words(word)
 end
 
 def get_sentences(sentence)
+  # rubocop:disable Style/StringChars
   @current_sentence = sentence.split('')
+  # rubocop:enable Style/StringChars
   decoded_sentence = ''
   @current_sentence.each do |text|
     decoded_sentence += get_words(text)
