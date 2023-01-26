@@ -17,11 +17,19 @@ end
 def get_words(word)
   @current_word = ''
   word.split.each do |char|
-   get_letters(char)
-   @current_word += get_letters(char)
+    get_letters(char)
+    @current_word += get_letters(char)
   end
   @current_word
-end  
+end
 
-puts(get_words('-- -.--'))
+def get_sentences(sentence)
+  @current_sentence = sentence.split('')
+  decoded_sentence = ''
+  @current_sentence.each do |text|
+    decoded_sentence += get_words(text)
+  end
+  decoded_sentence
+end
 
+puts get_sentences('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
