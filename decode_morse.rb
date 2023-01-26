@@ -10,7 +10,7 @@
 }
 
 def get_letters(character)
-  @current_letter =  @morse_alphabet[character]
+  @current_letter = @morse_alphabet[character]
   @current_letter
 end
 
