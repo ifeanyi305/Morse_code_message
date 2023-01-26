@@ -8,3 +8,10 @@
   '....-' => '4', '.....' => '5', '-....' => '6', '--...' => '7',
   '---..' => '8', '----.' => '9', '-----' => '0', '.-.-.-' => '.'
 }
+
+def get_letters(character)
+  @current_letter =  @morse_alphabet[character]
+  @current_letter
+end
+
+puts(get_letters('-.-'))
