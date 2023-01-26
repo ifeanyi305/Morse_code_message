@@ -14,4 +14,14 @@ def get_letters(character)
   @current_letter
 end
 
-puts(get_letters('-.-'))
+def get_words(word)
+  @current_word = ''
+  word.split.each do |char|
+   get_letters(char)
+   @current_word += get_letters(char)
+  end
+  @current_word
+end  
+
+puts(get_words('-- -.--'))
+
